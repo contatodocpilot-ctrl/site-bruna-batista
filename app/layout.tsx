@@ -1,10 +1,11 @@
+```tsx
 import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Bruna Batista | Psicóloga",
+  title: "Bruna Batista | Psicologia · TCC",
   description:
-    "Atendimento psicológico com acolhimento, ética e profissionalismo.",
+    "Bruna Batista — Psicóloga. Atendimento em Psicologia com abordagem da Terapia Cognitivo-Comportamental.",
 };
 
 export default function RootLayout({
@@ -18,3 +19,4 @@ export default function RootLayout({
     </html>
   );
 }
+```
