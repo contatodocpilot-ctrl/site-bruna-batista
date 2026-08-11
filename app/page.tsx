@@ -1,164 +1,187 @@
+
+```tsx
+import Image from "next/image";
+
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#faf9f7] text-[#292725]">
-      <header className="fixed top-0 z-50 w-full border-b border-black/5 bg-[#faf9f7]/90 backdrop-blur-md">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+    <main>
+      <header className="site-header">
+        <div className="container nav">
           <div>
-            <p className="text-lg font-semibold tracking-wide">
-              Bruna Batista
-            </p>
-            <p className="text-xs tracking-[0.2em] text-black/50">
-              PSICOLOGIA
-            </p>
+            <strong>Bruna Batista</strong>
+            <span>PSICOLOGIA · TCC</span>
           </div>
 
-          <a
-            href="#contato"
-            className="rounded-full bg-[#292725] px-5 py-2.5 text-sm font-medium text-white transition hover:opacity-85"
-          >
+          <a href="#contato" className="nav-button">
             Agendar atendimento
           </a>
         </div>
       </header>
 
-      <section className="mx-auto grid min-h-screen max-w-6xl items-center gap-12 px-6 pb-20 pt-32 md:grid-cols-2">
-        <div>
-          <p className="mb-5 text-sm font-medium uppercase tracking-[0.25em] text-black/45">
-            Psicóloga
-          </p>
+      <section className="hero">
+        <div className="container hero-grid">
+          <div className="hero-content">
+            <p className="eyebrow">BRUNA BATISTA · PSICÓLOGA</p>
 
-          <h1 className="max-w-xl text-5xl font-light leading-[1.05] tracking-tight md:text-7xl">
-            Um espaço para você se ouvir.
-          </h1>
+            <h1>
+              Um espaço para
+              <br />
+              <em>você se ouvir.</em>
+            </h1>
 
-          <p className="mt-7 max-w-lg text-lg leading-8 text-black/60">
-            Psicoterapia com acolhimento, escuta e respeito à sua história.
-            Um espaço seguro para compreender sentimentos, construir novos
-            caminhos e cuidar de si.
-          </p>
+            <p className="hero-text">
+              Atendimento em Psicologia com abordagem da Terapia
+              Cognitivo-Comportamental (TCC), acolhimento, escuta e respeito
+              à sua história.
+            </p>
 
-          <div className="mt-9 flex flex-wrap gap-4">
-            <a
-              href="#contato"
-              className="rounded-full bg-[#292725] px-7 py-3.5 text-sm font-medium text-white transition hover:opacity-85"
-            >
-              Quero conversar
-            </a>
+            <div className="hero-actions">
+              <a href="#contato" className="button button-primary">
+                Quero conversar
+              </a>
 
-            <a
-              href="#sobre"
-              className="rounded-full border border-black/15 px-7 py-3.5 text-sm font-medium transition hover:bg-black/5"
-            >
-              Conheça meu trabalho
-            </a>
+              <a href="#sobre" className="button button-secondary">
+                Conheça meu trabalho
+              </a>
+            </div>
+
+            <div className="hero-note">
+              <span>●</span>
+              Atendimento individual · Psicologia TCC
+            </div>
           </div>
-        </div>
 
-        <div className="relative mx-auto w-full max-w-md">
-          <div className="absolute -inset-4 rounded-[2rem] bg-[#e8e4dc]" />
-          <div className="relative overflow-hidden rounded-[2rem] bg-white shadow-2xl">
-            <img
-              src="/bruna.jpg"
-              alt="Bruna Batista - Psicóloga"
-              className="h-[560px] w-full object-cover"
-            />
+          <div className="hero-photo">
+            <div className="photo-frame">
+              <Image
+                src="/bruna.jpg"
+                alt="Bruna Batista, psicóloga"
+                fill
+                priority
+                sizes="(max-width: 900px) 90vw, 520px"
+                className="photo"
+              />
+            </div>
           </div>
         </div>
       </section>
 
-      <section id="sobre" className="border-y border-black/5 bg-white">
-        <div className="mx-auto max-w-6xl px-6 py-24">
-          <div className="grid gap-12 md:grid-cols-2">
-            <div>
-              <p className="text-sm uppercase tracking-[0.25em] text-black/40">
-                Sobre
-              </p>
-              <h2 className="mt-4 text-4xl font-light tracking-tight md:text-5xl">
-                Cuidar da mente também é cuidar da vida.
-              </h2>
-            </div>
+      <section id="sobre" className="section section-light">
+        <div className="container two-columns">
+          <div>
+            <p className="eyebrow">SOBRE</p>
+            <h2>
+              Cuidar da mente
+              <br />
+              também é cuidar da vida.
+            </h2>
+          </div>
 
-            <div className="text-lg leading-8 text-black/60">
+          <div className="section-text">
+            <p>
+              A Psicologia pode ser um espaço de pausa, reflexão e
+              transformação. Um momento para compreender melhor pensamentos,
+              emoções e comportamentos.
+            </p>
+
+            <p>
+              Meu trabalho é baseado na Terapia Cognitivo-Comportamental,
+              buscando uma compreensão individualizada de cada pessoa e de sua
+              história.
+            </p>
+
+            <p>
+              O processo acontece com acolhimento, escuta profissional e
+              respeito ao seu tempo.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="section services">
+        <div className="container">
+          <div className="section-heading">
+            <p className="eyebrow">COMO POSSO AJUDAR</p>
+            <h2>Um atendimento pensado para você.</h2>
+          </div>
+
+          <div className="cards">
+            <article className="card">
+              <span>01</span>
+              <h3>Acolhimento</h3>
               <p>
-                A psicoterapia pode ser um espaço de pausa, reflexão e
-                transformação. Aqui, cada pessoa é acolhida em sua
-                individualidade, sem julgamentos e respeitando o seu tempo.
-              </p>
-
-              <p className="mt-6">
-                Meu objetivo é oferecer uma escuta profissional e humana para
-                que você possa compreender melhor o que está vivendo e
-                encontrar possibilidades para seguir em frente.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-[#faf9f7]">
-        <div className="mx-auto max-w-6xl px-6 py-24">
-          <p className="text-center text-sm uppercase tracking-[0.25em] text-black/40">
-            Como posso ajudar
-          </p>
-
-          <h2 className="mx-auto mt-4 max-w-2xl text-center text-4xl font-light tracking-tight md:text-5xl">
-            Um atendimento pensado para você.
-          </h2>
-
-          <div className="mt-14 grid gap-6 md:grid-cols-3">
-            <div className="rounded-3xl bg-white p-8 shadow-sm">
-              <h3 className="text-xl font-medium">Acolhimento</h3>
-              <p className="mt-4 leading-7 text-black/55">
-                Um ambiente de escuta respeitosa, onde você pode falar com
+                Um espaço de escuta respeitosa, onde você pode falar com
                 liberdade e segurança.
               </p>
-            </div>
+            </article>
 
-            <div className="rounded-3xl bg-white p-8 shadow-sm">
-              <h3 className="text-xl font-medium">Autoconhecimento</h3>
-              <p className="mt-4 leading-7 text-black/55">
-                Um processo para compreender emoções, pensamentos,
-                comportamentos e relações.
+            <article className="card">
+              <span>02</span>
+              <h3>Autoconhecimento</h3>
+              <p>
+                Compreensão de pensamentos, emoções, comportamentos e padrões
+                que fazem parte da sua experiência.
               </p>
-            </div>
+            </article>
 
-            <div className="rounded-3xl bg-white p-8 shadow-sm">
-              <h3 className="text-xl font-medium">Novos caminhos</h3>
-              <p className="mt-4 leading-7 text-black/55">
-                Construção de novas perspectivas e estratégias para lidar com
-                os desafios da vida.
+            <article className="card">
+              <span>03</span>
+              <h3>TCC</h3>
+              <p>
+                Uma abordagem estruturada que trabalha a relação entre
+                pensamentos, emoções e comportamentos.
               </p>
-            </div>
+            </article>
           </div>
         </div>
       </section>
 
-      <section id="contato" className="bg-[#292725] text-white">
-        <div className="mx-auto max-w-6xl px-6 py-24 text-center">
-          <p className="text-sm uppercase tracking-[0.25em] text-white/45">
-            Vamos conversar?
-          </p>
+      <section className="cta" id="contato">
+        <div className="container cta-content">
+          <p className="eyebrow">VAMOS CONVERSAR?</p>
 
-          <h2 className="mx-auto mt-5 max-w-3xl text-4xl font-light tracking-tight md:text-6xl">
-            Seu primeiro passo pode começar com uma conversa.
+          <h2>
+            Seu primeiro passo
+            <br />
+            pode começar aqui.
           </h2>
 
-          <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-white/60">
+          <p>
             Entre em contato para conhecer o atendimento e tirar suas dúvidas.
           </p>
-<a
-  href="https://wa.me/5532999997065"
-  className="mt-9 inline-flex rounded-full bg-white px-8 py-4 text-sm font-semibold"
->
-  Falar pelo WhatsApp
-</a>
-          
+
+          <a
+            href="https://wa.me/5532999997065"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="button button-light"
+          >
+            Falar pelo WhatsApp
+          </a>
         </div>
       </section>
 
-      <footer className="bg-[#292725] px-6 pb-8 text-center text-sm text-white/40">
-        © {new Date().getFullYear()} Bruna Batista · Psicologia
+      <footer>
+        <div className="container footer-content">
+          <div>
+            <strong>Bruna Batista</strong>
+            <span>Psicologia · TCC</span>
+          </div>
+
+          <p>© 2026 Bruna Batista · Psicologia</p>
+        </div>
       </footer>
+
+      <a
+        href="https://wa.me/5532999997065"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="whatsapp"
+        aria-label="Falar com Bruna Batista pelo WhatsApp"
+      >
+        WhatsApp
+      </a>
     </main>
   );
 }
+```
