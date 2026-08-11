@@ -148,7 +148,7 @@ export default function Home() {
           </p>
 
           <a
-            href="https://wa.me/"
+            https://wa.me/5532999997065
             className="mt-9 inline-flex rounded-full bg-white px-8 py-4 text-sm font-semibold text-[#292725] transition hover:bg-white/90"
           >
             Falar pelo WhatsApp
