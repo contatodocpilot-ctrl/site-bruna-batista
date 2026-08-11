@@ -146,13 +146,13 @@ export default function Home() {
           <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-white/60">
             Entre em contato para conhecer o atendimento e tirar suas dúvidas.
           </p>
-
-          <a
-            https://wa.me/5532999997065
-            className="mt-9 inline-flex rounded-full bg-white px-8 py-4 text-sm font-semibold text-[#292725] transition hover:bg-white/90"
-          >
-            Falar pelo WhatsApp
-          </a>
+<a
+  href="https://wa.me/5532999997065"
+  className="mt-9 inline-flex rounded-full bg-white px-8 py-4 text-sm font-semibold"
+>
+  Falar pelo WhatsApp
+</a>
+          
         </div>
       </section>
 
