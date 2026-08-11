@@ -172,7 +172,7 @@ export default function Home() {
       </a>
     </main>
   );
-}
+
 
           <button aria-label="Abrir menu" className="md:hidden">
             <Menu size={25} />
