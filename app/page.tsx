@@ -1,18 +1,17 @@
-
 ```tsx
 import Image from "next/image";
 
 export default function Home() {
   return (
     <main>
-      <header className="site-header">
+      <header className="header">
         <div className="container nav">
-          <div>
+          <div className="brand">
             <strong>Bruna Batista</strong>
             <span>PSICOLOGIA · TCC</span>
           </div>
 
-          <a href="#contato" className="nav-button">
+          <a href="#contato" className="nav-link">
             Agendar atendimento
           </a>
         </div>
@@ -20,56 +19,55 @@ export default function Home() {
 
       <section className="hero">
         <div className="container hero-grid">
-          <div className="hero-content">
+          <div className="hero-copy">
             <p className="eyebrow">BRUNA BATISTA · PSICÓLOGA</p>
 
             <h1>
               Um espaço para
               <br />
-              <em>você se ouvir.</em>
+              <i>você se ouvir.</i>
             </h1>
 
-            <p className="hero-text">
+            <p className="hero-description">
               Atendimento em Psicologia com abordagem da Terapia
-              Cognitivo-Comportamental (TCC), acolhimento, escuta e respeito
-              à sua história.
+              Cognitivo-Comportamental (TCC), com acolhimento, escuta
+              profissional e respeito à sua história.
             </p>
 
-            <div className="hero-actions">
-              <a href="#contato" className="button button-primary">
+            <div className="hero-buttons">
+              <a href="#contato" className="button button-gold">
                 Quero conversar
               </a>
 
-              <a href="#sobre" className="button button-secondary">
+              <a href="#sobre" className="button button-outline">
                 Conheça meu trabalho
               </a>
             </div>
 
-            <div className="hero-note">
-              <span>●</span>
-              Atendimento individual · Psicologia TCC
-            </div>
+            <p className="hero-small">
+              <span>●</span> Psicologia · Terapia Cognitivo-Comportamental
+            </p>
           </div>
 
-          <div className="hero-photo">
-            <div className="photo-frame">
+          <div className="hero-image-wrap">
+            <div className="hero-image">
               <Image
                 src="/bruna.jpg"
                 alt="Bruna Batista, psicóloga"
                 fill
                 priority
-                sizes="(max-width: 900px) 90vw, 520px"
-                className="photo"
+                sizes="(max-width: 900px) 90vw, 500px"
               />
             </div>
           </div>
         </div>
       </section>
 
-      <section id="sobre" className="section section-light">
-        <div className="container two-columns">
+      <section id="sobre" className="section about">
+        <div className="container about-grid">
           <div>
-            <p className="eyebrow">SOBRE</p>
+            <p className="eyebrow dark">SOBRE</p>
+
             <h2>
               Cuidar da mente
               <br />
@@ -77,31 +75,33 @@ export default function Home() {
             </h2>
           </div>
 
-          <div className="section-text">
+          <div className="text">
             <p>
               A Psicologia pode ser um espaço de pausa, reflexão e
-              transformação. Um momento para compreender melhor pensamentos,
-              emoções e comportamentos.
+              transformação. Um momento para olhar para aquilo que você está
+              vivendo com mais cuidado e compreensão.
             </p>
 
             <p>
-              Meu trabalho é baseado na Terapia Cognitivo-Comportamental,
-              buscando uma compreensão individualizada de cada pessoa e de sua
-              história.
+              O atendimento de Bruna Batista é baseado na Terapia
+              Cognitivo-Comportamental, uma abordagem que considera a relação
+              entre pensamentos, emoções e comportamentos.
             </p>
 
             <p>
-              O processo acontece com acolhimento, escuta profissional e
-              respeito ao seu tempo.
+              Cada pessoa possui uma história única. Por isso, o processo é
+              conduzido de maneira individualizada, com acolhimento, respeito
+              e escuta profissional.
             </p>
           </div>
         </div>
       </section>
 
-      <section className="section services">
+      <section className="section approach">
         <div className="container">
-          <div className="section-heading">
-            <p className="eyebrow">COMO POSSO AJUDAR</p>
+          <div className="heading">
+            <p className="eyebrow dark">PSICOLOGIA · TCC</p>
+
             <h2>Um atendimento pensado para você.</h2>
           </div>
 
@@ -111,7 +111,7 @@ export default function Home() {
               <h3>Acolhimento</h3>
               <p>
                 Um espaço de escuta respeitosa, onde você pode falar com
-                liberdade e segurança.
+                liberdade, segurança e sem julgamentos.
               </p>
             </article>
 
@@ -119,8 +119,8 @@ export default function Home() {
               <span>02</span>
               <h3>Autoconhecimento</h3>
               <p>
-                Compreensão de pensamentos, emoções, comportamentos e padrões
-                que fazem parte da sua experiência.
+                Um processo para compreender melhor pensamentos, emoções,
+                comportamentos e relações.
               </p>
             </article>
 
@@ -136,8 +136,18 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="cta" id="contato">
-        <div className="container cta-content">
+      <section className="quote">
+        <div className="container quote-inner">
+          <span>“</span>
+          <p>
+            Conhecer a si mesmo pode ser o começo de uma nova forma de olhar
+            para a própria história.
+          </p>
+        </div>
+      </section>
+
+      <section id="contato" className="contact">
+        <div className="container contact-inner">
           <p className="eyebrow">VAMOS CONVERSAR?</p>
 
           <h2>
@@ -154,18 +164,18 @@ export default function Home() {
             href="https://wa.me/5532999997065"
             target="_blank"
             rel="noopener noreferrer"
-            className="button button-light"
+            className="button button-white"
           >
             Falar pelo WhatsApp
           </a>
         </div>
       </section>
 
-      <footer>
-        <div className="container footer-content">
-          <div>
+      <footer className="footer">
+        <div className="container footer-inner">
+          <div className="brand">
             <strong>Bruna Batista</strong>
-            <span>Psicologia · TCC</span>
+            <span>PSICOLOGIA · TCC</span>
           </div>
 
           <p>© 2026 Bruna Batista · Psicologia</p>
