@@ -304,7 +304,6 @@ export default function Home() {
           <p>Um espaço para cuidar de pessoas.</p>
         </div>
       </footer>
-
       <a
         href={whatsapp}
         target="_blank"
@@ -317,3 +316,4 @@ export default function Home() {
     </main>
   );
 }
+      
