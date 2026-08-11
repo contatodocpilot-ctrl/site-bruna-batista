@@ -1,11 +1,39 @@
 import Image from "next/image";
-import { ArrowUpRight, Brain, Heart, Instagram, Leaf, Menu, MessageCircle, ShieldCheck, UserRound } from "lucide-react";
+import {
+ArrowUpRight,
+Brain,
+Heart,
+Instagram,
+Leaf,
+Menu,
+MessageCircle,
+ShieldCheck,
+UserRound,
+} from "lucide-react";
+
+const WHATSAPP = "https://wa.me/5532999997065";
 
 const areas = [
-{ icon: Brain, title: "Ansiedade e Estresse", text: "Acolhimento e estratégias para lidar com preocupações, sobrecarga e estresse." },
-{ icon: Heart, title: "Autoestima", text: "Fortalecimento da autoestima e construção de uma relação mais saudável consigo." },
-{ icon: Leaf, title: "Relacionamentos", text: "Compreensão de padrões e desenvolvimento de relações mais conscientes." },
-{ icon: UserRound, title: "Desenvolvimento Pessoal", text: "Autoconhecimento e crescimento para uma vida com mais propósito." },
+{
+icon: Brain,
+title: "Ansiedade e Estresse",
+text: "Acolhimento e estratégias para lidar com preocupações, sobrecarga e estresse.",
+},
+{
+icon: Heart,
+title: "Autoestima",
+text: "Fortalecimento da autoestima e construção de uma relação mais saudável consigo.",
+},
+{
+icon: Leaf,
+title: "Relacionamentos",
+text: "Compreensão de padrões e desenvolvimento de relações mais conscientes.",
+},
+{
+icon: UserRound,
+title: "Desenvolvimento Pessoal",
+text: "Autoconhecimento e crescimento para uma vida com mais propósito.",
+},
 ];
 
 export default function Home() {
@@ -24,7 +52,9 @@ PSICÓLOGA </span> </a>
       </nav>
 
       <a
-        href="#contato"
+        href={WHATSAPP}
+        target="_blank"
+        rel="noopener noreferrer"
         className="hidden rounded-md bg-[#c9a66b] px-6 py-3 text-xs font-bold tracking-[.12em] text-white md:block"
       >
         AGENDAR
@@ -36,7 +66,10 @@ PSICÓLOGA </span> </a>
     </div>
   </header>
 
-  <section id="inicio" className="relative min-h-[760px] overflow-hidden bg-[#211d17] pt-20 text-white">
+  <section
+    id="inicio"
+    className="relative min-h-[760px] overflow-hidden bg-[#211d17] pt-20 text-white"
+  >
     <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_35%,rgba(201,166,107,.16),transparent_32%),linear-gradient(90deg,#211d17_0%,#211d17e8_43%,#211d1733_100%)]" />
 
     <div className="container relative grid min-h-[680px] items-center md:grid-cols-[.85fr_1.15fr]">
@@ -61,7 +94,9 @@ PSICÓLOGA </span> </a>
         </p>
 
         <a
-          href="#contato"
+          href={WHATSAPP}
+          target="_blank"
+          rel="noopener noreferrer"
           className="mt-9 inline-flex items-center gap-3 rounded-md bg-[#c9a66b] px-7 py-4 text-sm font-bold tracking-[.08em]"
         >
           AGENDAR PELO WHATSAPP
@@ -118,9 +153,7 @@ PSICÓLOGA </span> </a>
           <ShieldCheck className="text-[#c9a66b]" />
           <div>
             <p className="font-semibold">Psicóloga</p>
-            <p className="text-sm text-black/55">
-              CRP • inserir número confirmado
-            </p>
+            <p className="text-sm text-black/55">CRP 04/74747</p>
           </div>
         </div>
       </div>
@@ -246,19 +279,26 @@ PSICÓLOGA </span> </a>
 
       <div className="md:justify-self-end">
         <a
-          href="#contato"
+          href={WHATSAPP}
+          target="_blank"
+          rel="noopener noreferrer"
           className="inline-flex items-center gap-3 rounded-md bg-[#18382c] px-7 py-4 text-sm font-bold tracking-[.08em] text-white"
         >
           <MessageCircle size={19} />
           AGENDAR PELO WHATSAPP
         </a>
 
-        <div className="mt-6 flex items-center gap-3 text-sm text-black/60">
+        <a
+          href="https://www.instagram.com/psi.brunabatista/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-6 flex items-center gap-3 text-sm text-black/60 hover:text-[#18382c]"
+        >
           <Instagram size={18} />
           @psi.brunabatista
           <span className="text-black/30">•</span>
           Atendimento online e presencial
-        </div>
+        </a>
       </div>
     </div>
   </section>
@@ -271,7 +311,9 @@ PSICÓLOGA </span> </a>
   </footer>
 
   <a
-    href="#contato"
+    href={WHATSAPP}
+    target="_blank"
+    rel="noopener noreferrer"
     aria-label="Agendar pelo WhatsApp"
     className="fixed bottom-6 right-6 z-50 grid h-14 w-14 place-items-center rounded-full bg-[#25D366] text-white shadow-xl"
   >
